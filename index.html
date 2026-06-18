@@ -3,286 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Batkov Studio</title>
-
+<title>Batkov Studio | Modern Websites for Local Businesses</title>
+<meta name="description" content="Batkov Studio creates modern, fast and professional websites for small businesses, service providers and local brands. Based in Vienna, Austria.">
+<meta name="theme-color" content="#080808">
 <style>
-    body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
-        background: #0b0b0b;
-        color: white;
-    }
+:root{--bg:#070707;--panel:#111111;--panel2:#171717;--text:#fff;--muted:#b8b8b8;--line:rgba(255,255,255,.12);--soft:rgba(255,255,255,.06)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+body:before{content:"";position:fixed;inset:-20%;background:radial-gradient(circle at 20% 10%,rgba(255,255,255,.10),transparent 25%),radial-gradient(circle at 80% 20%,rgba(120,120,255,.14),transparent 25%),radial-gradient(circle at 50% 90%,rgba(255,255,255,.08),transparent 28%);pointer-events:none;z-index:-2}
+body:after{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.82));pointer-events:none;z-index:-1}
+a{color:inherit}header{position:fixed;top:0;left:0;width:100%;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;background:rgba(7,7,7,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);z-index:99}
+.logo{font-weight:800;letter-spacing:2px;font-size:15px}nav{display:flex;gap:24px;align-items:center}nav a{color:var(--muted);text-decoration:none;font-size:14px;transition:.2s}nav a:hover{color:#fff}.nav-cta{border:1px solid var(--line);padding:9px 14px;border-radius:999px;color:#fff}
+.hero{min-height:100vh;padding:150px 7% 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:8px 13px;color:var(--muted);font-size:14px;margin-bottom:20px}.badge span{width:8px;height:8px;border-radius:50%;background:#69ff91;box-shadow:0 0 18px #69ff91}
+h1{font-size:clamp(46px,7vw,88px);line-height:.96;letter-spacing:-4px;margin:0}.lead{color:var(--muted);font-size:19px;line-height:1.7;max-width:680px;margin:24px 0 0}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:750;border:1px solid var(--line);transition:.2s}.btn.primary{background:#fff;color:#050505}.btn.secondary{background:rgba(255,255,255,.06);color:#fff}.btn:hover{transform:translateY(-2px)}
+.hero-card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035));border-radius:32px;padding:28px;box-shadow:0 30px 90px rgba(0,0,0,.4)}.browser{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#0d0d0d}.browser-top{height:44px;display:flex;align-items:center;gap:7px;padding:0 16px;border-bottom:1px solid var(--line)}.dot{width:10px;height:10px;border-radius:50%;background:#777}
+.mock{padding:30px;min-height:390px;background:linear-gradient(135deg,rgba(255,255,255,.14),transparent),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80') center/cover;position:relative}.mock:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.54)}.mock-content{position:relative;z-index:1}.mock h3{font-size:32px;margin:0 0 14px}.mock p{color:#e8e8e8;line-height:1.6}.mock-boxes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}.mock-box{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:18px}
+section{padding:105px 7%;max-width:1280px;margin:auto}.section-head{display:flex;justify-content:space-between;gap:32px;align-items:end;margin-bottom:36px}.eyebrow{text-transform:uppercase;letter-spacing:2px;color:var(--muted);font-size:12px;font-weight:800;margin-bottom:12px}h2{margin:0;font-size:clamp(34px,5vw,58px);letter-spacing:-2px;line-height:1}.text{color:var(--muted);line-height:1.8;font-size:17px;max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:24px;padding:26px;min-height:190px;transition:.22s}.card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.28)}.card h3{margin:0 0 12px;font-size:22px}.card p,.card li{color:var(--muted);line-height:1.65}.card ul{padding-left:18px;margin:14px 0 0}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{padding:24px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid var(--line)}.step b{display:block;font-size:13px;color:#aaa;margin-bottom:18px}.step h3{margin:0 0 10px}.step p{color:var(--muted);line-height:1.6;margin:0}
+.showcase{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.showcase .large{min-height:430px;border-radius:28px;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.75)),url('https://images.unsplash.com/photo-1559028006-44e6b2b0d0c4?auto=format&fit=crop&w=1400&q=80') center/cover;border:1px solid var(--line);padding:34px;display:flex;flex-direction:column;justify-content:end}.showcase .side{display:grid;gap:18px}.mini{border:1px solid var(--line);background:var(--panel);border-radius:28px;padding:28px}.mini h3,.large h3{margin:0 0 10px;font-size:26px}.mini p,.large p{color:var(--muted);line-height:1.7;margin:0}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.trust-item{border:1px solid var(--line);border-radius:24px;padding:24px;background:rgba(255,255,255,.04)}.trust-item strong{display:block;font-size:28px;margin-bottom:8px}.trust-item span{color:var(--muted);line-height:1.5}
+.about-box{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:stretch}.profile{border-radius:30px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.03));padding:30px}.avatar{width:74px;height:74px;border-radius:22px;background:#fff;color:#060606;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;margin-bottom:22px}.profile p{color:var(--muted);line-height:1.75}
+.contact{background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.035));border:1px solid var(--line);border-radius:34px;padding:38px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}.contact-card{background:#0b0b0b;border:1px solid var(--line);border-radius:24px;padding:26px}.contact-card a{display:block;color:#fff;text-decoration:none;font-size:22px;font-weight:800;margin-top:8px;word-break:break-word}
+footer{border-top:1px solid var(--line);padding:34px 7%;color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a{color:var(--muted);text-decoration:none}
+@media(max-width:920px){header{padding:16px 20px}nav a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;padding:130px 20px 60px}h1{letter-spacing:-2px}section{padding:75px 20px}.section-head{display:block}.grid,.process,.trust,.showcase,.about-box,.contact{grid-template-columns:1fr}.mock{min-height:320px}}
 
-    header {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        padding: 18px 50px;
-        display: flex;
-        justify-content: space-between;
-        background: rgba(10,10,10,0.75);
-        backdrop-filter: blur(12px);
-        z-index: 10;
-    }
+.demo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.demo-card{border:1px solid var(--line);border-radius:28px;overflow:hidden;background:var(--panel);min-height:330px}
+.demo-image{height:170px;background:center/cover no-repeat}
+.demo-body{padding:24px}
+.demo-body h3{margin:0 0 10px;font-size:23px}
+.demo-body p{color:var(--muted);line-height:1.65;margin:0}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.faq-item{background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:22px;padding:24px}
+.faq-item h3{margin:0 0 10px;font-size:20px}
+.faq-item p{margin:0;color:var(--muted);line-height:1.7}
+.contact-note{margin-top:18px;padding:18px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--muted);line-height:1.7}
+@media(max-width:920px){.demo-grid,.faq{grid-template-columns:1fr}}
 
-    header h1 {
-        font-size: 18px;
-        letter-spacing: 2px;
-    }
-
-    nav a {
-        margin-left: 20px;
-        color: white;
-        text-decoration: none;
-        opacity: 0.7;
-    }
-
-    nav a:hover {
-        opacity: 1;
-    }
-
-    .hero {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: url('https://images.unsplash.com/photo-1526498460520-4c246339dccb') center/cover no-repeat;
-    }
-
-    .hero h2 {
-        font-size: 64px;
-        margin: 0;
-    }
-
-    .hero p {
-        font-size: 18px;
-        max-width: 700px;
-        opacity: 0.85;
-        line-height: 1.6;
-    }
-
-    .btn {
-        margin-top: 25px;
-        padding: 12px 28px;
-        border-radius: 30px;
-        background: white;
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    section {
-        padding: 100px 20px;
-        max-width: 1100px;
-        margin: auto;
-    }
-
-    h2 {
-        font-size: 36px;
-        margin-bottom: 15px;
-    }
-
-    .text {
-        opacity: 0.8;
-        line-height: 1.8;
-        max-width: 850px;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 15px;
-        margin-top: 20px;
-    }
-
-    img {
-        width: 100%;
-        border-radius: 15px;
-        transition: 0.3s;
-    }
-
-    img:hover {
-        transform: scale(1.04);
-    }
-
-    .card {
-        background: #141414;
-        padding: 20px;
-        border-radius: 15px;
-        line-height: 1.6;
-    }
-
-    .stats {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .stat {
-        background: #111;
-        padding: 25px;
-        border-radius: 15px;
-    }
-
-    .stat h3 {
-        font-size: 30px;
-        margin: 0;
-    }
-
-    footer {
-        text-align: center;
-        padding: 40px;
-        opacity: 0.6;
-        font-size: 14px;
-    }
+@media(max-width:520px){.hero-actions{display:grid}.btn{width:100%}.mock-boxes{grid-template-columns:1fr}}
 </style>
-
 </head>
-
 <body>
+<header><div class="logo">BATKOV STUDIO</div><nav><a href="#services">Services</a><a href="#process">Process</a><a href="#work">Work</a><a href="#about">About</a><a class="nav-cta" href="#contact">Contact</a></nav></header>
+<main>
+<section class="hero"><div><div class="badge"><span></span> Web design for local businesses</div><h1>Modern websites that make small businesses look serious.</h1><p class="lead">Batkov Studio helps local companies, service providers and personal brands create clean, fast and professional websites that build trust and make it easier for customers to contact you.</p><div class="hero-actions"><a class="btn primary" href="mailto:kontakt@batkovstudio.com?subject=Website%20Project%20Request">Start a project</a><a class="btn secondary" href="#work">View examples</a></div></div><div class="hero-card"><div class="browser"><div class="browser-top"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div><div class="mock"><div class="mock-content"><h3>Your business, presented better.</h3><p>A sharp first impression, clear structure, mobile-friendly pages and a direct way for customers to reach you.</p><div class="mock-boxes"><div class="mock-box">Responsive design</div><div class="mock-box">Clear offer</div><div class="mock-box">Trust-focused layout</div><div class="mock-box">Fast launch</div></div></div></div></div></div></section>
+<section id="services"><div class="section-head"><div><div class="eyebrow">Services</div><h2>Everything your online presence needs.</h2></div><p class="text">Simple, professional and focused on what matters: making your company look trustworthy and helping visitors become real inquiries.</p></div><div class="grid"><div class="card"><h3>Business Websites</h3><p>Clean websites for local companies, trades, beauty studios, fitness brands and service providers.</p><ul><li>Home page</li><li>Services section</li><li>Contact area</li></ul></div><div class="card"><h3>Website Redesign</h3><p>Refresh outdated pages with a modern structure, better visuals and clearer messaging.</p><ul><li>Modern layout</li><li>Better mobile view</li><li>Stronger first impression</li></ul></div><div class="card"><h3>Landing Pages</h3><p>Focused pages for offers, campaigns and lead generation with a direct call-to-action.</p><ul><li>Fast-loading design</li><li>Conversion-focused copy</li><li>Direct contact links</li></ul></div></div></section>
+<section id="process"><div class="section-head"><div><div class="eyebrow">Process</div><h2>Clear, simple and transparent.</h2></div></div><div class="process"><div class="step"><b>01</b><h3>Understand</h3><p>We look at your business, your current website and what customers need to see first.</p></div><div class="step"><b>02</b><h3>Concept</h3><p>You get a clear direction for the structure, design and key message of your website.</p></div><div class="step"><b>03</b><h3>Build</h3><p>The website is designed and prepared for desktop and mobile devices.</p></div><div class="step"><b>04</b><h3>Launch</h3><p>After final changes, your website goes live and is ready to share with customers.</p></div></div></section>
+<section id="work"><div class="section-head"><div><div class="eyebrow">Example Work</div><h2>Demo concepts for real business types.</h2></div><p class="text">Portfolio is currently being built. Instead of showing fake client numbers, Batkov Studio focuses on realistic demo concepts and custom previews for interested companies.</p></div><div class="showcase"><div class="large"><h3>Local service business concept</h3><p>A professional one-page website structure for companies that need trust, clear services and easy contact.</p></div><div class="side"><div class="mini"><h3>Beauty & Studio</h3><p>Premium look, clean service overview and direct booking/contact call-to-action.</p></div><div class="mini"><h3>Trades & Services</h3><p>Clear offer, location trust, phone-first contact and mobile-friendly structure.</p></div><div class="mini"><h3>Fitness & Coaching</h3><p>Personal brand presentation with strong visuals, credibility and inquiry flow.</p></div></div></div></section>
+<section id="demos">
+    <div class="section-head">
+        <div>
+            <div class="eyebrow">Demo Projects</div>
+            <h2>Example website directions.</h2>
+        </div>
+        <p class="text">These are concept directions, not fake client projects. They show how different local businesses could be presented more professionally online.</p>
+    </div>
 
-<header>
-    <h1>BATKOV STUDIO</h1>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#stats">Results</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<div class="hero">
-    <h2>We build digital brands that stand out.</h2>
-    <p>
-        Batkov Studio is a modern creative agency specializing in branding, web design,
-        and digital identity systems. We help businesses transform ideas into powerful visual experiences.
-    </p>
-    <a class="btn" href="#contact">Start a Project</a>
-</div>
-
-<section id="about">
-    <h2>About Batkov Studio</h2>
-    <p class="text">
-        Batkov Studio is a creative digital agency focused on crafting modern, minimal,
-        and high-performance designs. We combine strategy, design, and technology to build
-        brands that not only look good — but also communicate clearly and convert effectively.
-        <br><br>
-        Over time, we have worked on multiple design concepts, brand identities, and website
-        structures for emerging businesses and creators. Our goal is simple: create clean,
-        premium-quality visuals that make an impact in a crowded digital world.
-    </p>
-
-    <div class="grid">
-        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
-        <img src="https://images.unsplash.com/photo-1557683316-973673baf926">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+    <div class="demo-grid">
+        <div class="demo-card">
+            <div class="demo-image" style="background-image:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80')"></div>
+            <div class="demo-body">
+                <h3>Beauty Studio Demo</h3>
+                <p>Elegant layout for salons, beauty studios and personal care businesses with services, trust elements and easy booking contact.</p>
+            </div>
+        </div>
+        <div class="demo-card">
+            <div class="demo-image" style="background-image:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80')"></div>
+            <div class="demo-body">
+                <h3>Service Business Demo</h3>
+                <p>Clear structure for electricians, plumbers, repair services and local companies that need phone-first contact and credibility.</p>
+            </div>
+        </div>
+        <div class="demo-card">
+            <div class="demo-image" style="background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=80')"></div>
+            <div class="demo-body">
+                <h3>Fitness Coach Demo</h3>
+                <p>Strong personal brand presentation for coaches, trainers and fitness offers with clear packages and lead-focused contact.</p>
+            </div>
+        </div>
     </div>
 </section>
+<section><div class="section-head"><div><div class="eyebrow">Why it works</div><h2>Built for trust, not just decoration.</h2></div></div><div class="trust"><div class="trust-item"><strong>Mobile-first</strong><span>Most visitors check businesses on their phone. Your website should look good there first.</span></div><div class="trust-item"><strong>Clear offer</strong><span>Customers should understand what you do, who you help and how to contact you quickly.</span></div><div class="trust-item"><strong>Professional image</strong><span>A clean website, domain and business email make your company feel more serious immediately.</span></div></div></section>
+<section id="about"><div class="section-head"><div><div class="eyebrow">About</div><h2>A small studio with personal contact.</h2></div></div><div class="about-box"><div class="profile"><div class="avatar">BS</div><h3>Batkov Studio</h3><p>Focused on creating modern websites for small businesses, local brands and service providers.</p></div><div class="card"><h3>About the studio.</h3><p>Batkov Studio helps small businesses look more professional online. The goal is simple: clean design, clear communication and websites that make it easier for customers to trust your business.</p><p>If your current website feels outdated, unclear or not serious enough, Batkov Studio can redesign it or create a new modern version.</p></div></div></section>
 
-<section id="services">
-    <h2>What We Do</h2>
-    <p class="text">
-        We offer end-to-end creative solutions for modern brands. From identity creation
-        to digital presence — we make sure your brand looks professional, consistent, and powerful.
-    </p>
-
-    <div class="grid">
-        <div class="card">
-            <b>Brand Identity Design</b><br>
-            We create strong visual identities including logos, color systems, typography,
-            and full brand guidelines.
-        </div>
-
-        <div class="card">
-            <b>Web Design & Development</b><br>
-            Modern, responsive websites built with clean UI principles and conversion-focused structure.
-        </div>
-
-        <div class="card">
-            <b>Social Media Design</b><br>
-            Eye-catching content for Instagram, TikTok, and online platforms that increases engagement.
-        </div>
-
-        <div class="card">
-            <b>Marketing Visuals</b><br>
-            Ads, banners, and promotional creatives designed to attract attention and drive results.
+<section id="faq">
+    <div class="section-head">
+        <div>
+            <div class="eyebrow">FAQ</div>
+            <h2>Questions businesses usually ask.</h2>
         </div>
     </div>
 
-    <div class="grid" style="margin-top:20px;">
-        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-    </div>
-</section>
-
-<section id="work">
-    <h2>Selected Work</h2>
-    <p class="text">
-        A selection of our visual concepts and design work. Each project reflects our focus on clarity,
-        simplicity, and strong visual communication.
-    </p>
-
-    <div class="grid">
-        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb">
-        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb">
-        <img src="https://images.unsplash.com/photo-1559028006-44e6b2b0d0c4">
-        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0">
-    </div>
-</section>
-
-<section id="stats">
-    <h2>Our Impact</h2>
-    <p class="text">
-        We measure success not only by visuals, but by the real impact our designs create for brands.
-    </p>
-
-    <div class="stats">
-        <div class="stat">
-            <h3>120+</h3>
-            Projects Completed
+    <div class="faq">
+        <div class="faq-item">
+            <h3>How long does a website take?</h3>
+            <p>A simple professional one-page website can usually be prepared quickly after the content and direction are clear.</p>
         </div>
-
-        <div class="stat">
-            <h3>85+</h3>
-            Happy Clients
+        <div class="faq-item">
+            <h3>Can an old website be redesigned?</h3>
+            <p>Yes. Existing websites can be modernized with a better layout, clearer text and improved mobile presentation.</p>
         </div>
-
-        <div class="stat">
-            <h3>4.9/5</h3>
-            Client Rating
+        <div class="faq-item">
+            <h3>Do you also help with the text?</h3>
+            <p>Yes. The website structure and wording can be improved so visitors understand the offer faster.</p>
         </div>
-
-        <div class="stat">
-            <h3>2+ Years</h3>
-            Experience
+        <div class="faq-item">
+            <h3>Can I first see an idea?</h3>
+            <p>Yes. For interested businesses, Batkov Studio can prepare a short direction or demo concept before a full project starts.</p>
         </div>
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p class="text">
-        Have a project in mind? Whether it's a brand, website, or digital concept —
-        we’re ready to bring your vision to life.
-    </p>
-
-    <div class="card">
-        📧 Email: <b>batkovstudio@gmail.com</b><br><br>
-        We usually respond within 24 hours. Let’s build something great together.
-    </div>
-</section>
-
-<footer>
-    © 2026 Batkov Studio — All rights reserved.
-</footer>
-
+<section id="contact"><div class="contact"><div><div class="eyebrow">Contact</div><h2>Want to improve your website?</h2><p class="text">Send your current website or a short description of your business. Batkov Studio will take a look and reply with 2–3 clear improvement ideas.</p><div class="hero-actions"><a class="btn primary" href="mailto:kontakt@batkovstudio.com?subject=Website%20Project%20Request">Send an email</a><a class="btn secondary" href="https://batkovstudio.com">batkovstudio.com</a></div></div><div class="contact-card"><span class="eyebrow">Business Email</span><a href="mailto:kontakt@batkovstudio.com">kontakt@batkovstudio.com</a><p class="text">Usually replies within 24 hours.</p><div class="contact-note">Tip: Send your current website link, business type and what you would like to improve. You will receive a clearer and more useful answer.</div></div></div></section>
+</main>
+<footer><div>© 2026 Batkov Studio. All rights reserved.</div><div class="footer-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#demos">Demos</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div></footer>
 </body>
 </html>
